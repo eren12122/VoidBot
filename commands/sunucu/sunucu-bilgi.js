@@ -115,7 +115,7 @@ module.exports = class ServerCommand extends Command {
             .addField(`❯ Roller:`, `<@&${msg.guild.roles.map(role => `${role.id}`).join('>, <@&')}>`, true)
             .setColor("RANDOM")
             .setTimestamp()
-            .setFooter(`VoidBot | Sunucu Bilgi`)
+            .setFooter(`ProxE | Sunucu Bilgi`)
             return msg.embed(embed);
     }
 };

@@ -57,20 +57,20 @@ module.exports = class ModerationBanCommand extends Command {
 		if (member.highestRole.calculatedPosition > msg.member.highestRole.calculatedPosition - 1) {
 			return msg.say(`Bu kişinin senin rollerinden/rolünden daha yüksek rolleri/rolü var.`);
 		}
-		member.send('**' + msg.guild.name + '** sunucusunda `' + msg.author.tag + '` adlı kişi/yetkili tarafından ___' + reason + '___ sebebi ile yasaklandın.')
+		member.send('**' + msg.guild.name + '** adlı sunucudan `' + msg.author.tag + '` adlı kişi/yetkili tarafından ___' + reason + '___ sebebi ile yasaklandın')
 		msg.guild.ban(user, 2);
 
 		const embed = new Discord.RichEmbed()
 		.setColor("#ff1100")
 		.setAuthor(`${msg.author.tag} (${msg.author.id})`)
-		.addField(`❯ Kasa:`, `Ban`)
+		.addField(`❯ Kasa Türü :`, `Ban`)
 		.addField(`❯ Kullanıcı:`, `${user.tag} (${user.id})`)
 		.addField(`❯ Yetkili:`, `${msg.author.tag} (${msg.author.id})`)
 		.addField(`❯ Sebep`, reason)
 		.setThumbnail(user.avatarURL)
 		.setTimestamp()
-		.setFooter(`VoidBot | Kasa: ${kasano}`, this.client.user.avatarURL)
+		.setFooter(`ProxE | Kasa NO : ${kasano}`, this.client.user.avatarURL)
 		guild.channels.get(modlog).send({embed});
-		return msg.channel.send(`İşlem başarılı!`);
+		return msg.channel.send(`İşlem başarılı ! ${user.tag} Adlı Kullanıcı Sunucudan Yasaklandı!`);
 	}
 };

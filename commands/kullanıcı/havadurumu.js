@@ -42,7 +42,7 @@ module.exports = class WeatherCommand extends Command {
 				embed.addField(`» Nem Oranı:`, `%${current.humidity}`, false)
 				embed.setColor("RANDOM")
 				embed.setTimestamp()
-				embed.setFooter(`${client.user.username} | VoidBot Hava Durumu Sistemi`)
+				embed.setFooter(`${client.user.username} | ProxE Hava Durumu Sistemi`)
 			message.embed(embed)
 		})
 	}

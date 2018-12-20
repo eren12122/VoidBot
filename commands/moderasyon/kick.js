@@ -52,7 +52,7 @@ module.exports = class ModerationKickCommand extends Command {
 		if (db ==! "evet") return msg.channel.send(` Lütfen \`mod-log-ayarla\` komutu ile mod-log kanalı belirleyiniz.`);
 		let modlog = vt;
 		if (!modlog) return msg.channel.send(` Mod-log olarak belirlediğiniz kanal silinmiş, lütfen yeni  bir mod-log kanalı açıp \`mod-log-ayarla\` komutu ile mod-log olarak ayarlayınız.`);
-		if (user.id === msg.author.id) return msg.say(` Kendini atamazsın.`)
+		if (user.id === msg.author.id) return msg.say(` Kendini Kickleyemezsin :smile: `)
 		if (member.highestRole.calculatedPosition > msg.member.highestRole.calculatedPosition - 1) {
 			return msg.say(` Bu kişinin senin rollerinden/rolünden daha yüksek rolleri/rolü var.`);
 		}
@@ -62,16 +62,16 @@ module.exports = class ModerationKickCommand extends Command {
 		msg.guild.member(user).kick();
 
 		const embed = new Discord.RichEmbed()
-		.setColor("#c2645d")
+		.setColor("#e03e22")
 		.setAuthor(`${msg.author.tag} (${msg.author.id})`)
-		.addField(`❯ Kasa:`, `Kick`)
+        .addField(`❯ Kasa Türü :`, `Kick`)
 		.addField(`❯ Kullanıcı:`, `${user.tag} (${user.id})`)
 		.addField(`❯ Yetkili:`, `${msg.author.tag} (${msg.author.id})`)
 		.addField(`❯ Sebep`, reason)
 		.setThumbnail(user.avatarURL)
 		.setTimestamp()
-		.setFooter(`VoidBot | Kasa: ${kasano}`, this.client.user.avatarURL)
+		.setFooter(`ProxE Kasa NO: ${kasano} `, this.client.user.avatarURL)
 		guild.channels.get(modlog).send({embed});
-		return msg.channel.send(` İşlem başarılı!`);
+    return msg.channel.send(` İşlem başarılı! ${user.tag} Adlı Kullanıcı Kicklendi!`);
 	}
 };

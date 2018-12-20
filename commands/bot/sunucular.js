@@ -18,7 +18,7 @@ module.exports = class CheckGuildsCommand extends Command {
     const embed = new RichEmbed()
     .setColor("RANDOM")
     .setThumbnail(this.client.user.avatarURL)
-    .setAuthor(`VoidBot | Sunucular`, this.client.user.avatarURL)    
+    .setAuthor(`ProxE | Sunucular`, this.client.user.avatarURL)    
     .setDescription(stripIndents`
     **Botun bulunduğu sunucu aşağıda verilmiştir sizde ekleyin sizin sunucunuzda çıksın! :smile: :**
 

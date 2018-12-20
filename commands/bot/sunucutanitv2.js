@@ -33,7 +33,7 @@ async run(message, args) {
     .addField(`❯ Sunucu Tanıtı Kullan Kişi`, `• Kullanıcı ID: ${message.author.id} \n• Kullanıcı Adı: ${message.author.tag}`)
     .addField(`❯ Sunucu Adı`, `•  ${message.guild.name}`)
     .addField(`❯ Gönderilen Sunucunun Daveti`, davet)
-    .setFooter(`VoidBot | Sunucu Tanıt Sistemi`)
+    .setFooter(`ProxE | Sunucu Tanıt Sistemi`)
     .setTimestamp()
     this.client.channels.get(`520246510873477131`).send({embed})
     }

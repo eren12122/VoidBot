@@ -41,7 +41,7 @@ module.exports = class ModerationCleanCommand extends Command {
 						msg.channel.bulkDelete(messages.size, true).then(deletedMessages => {
 							if (deletedMessages.size < 1) return bmsg.edit(` Hiç mesaj silinemedi. _(Tahminen 14 günden daha eski mesajlar var ise bundan dolayı mesajlar silinememiş olabilir.)_`).then(msg => msg.delete(3000));
 							const mesajadet = parseInt(deletedMessages.size) - 2;
-							msg.channel.send(`VoidBot adlı bot` + mesajadet + ' adet mesaj silindi!').then(msg => msg.delete(3000));	
+							msg.channel.send(`ProxE adlı bot` + mesajadet + ' adet mesaj silindi!').then(msg => msg.delete(3000));	
 						})
 					})
 				});

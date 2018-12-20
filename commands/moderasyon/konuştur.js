@@ -77,7 +77,7 @@ module.exports = class ModerationMuteCommand extends Command {
 		.addField(`❯ Sebep`, reason)
 		.setThumbnail(user.avatarURL)
 		.setTimestamp()
-		.setFooter(`VoidBot | Kasa: ${kasano}`, this.client.user.avatarURL)
+		.setFooter(`ProxE| Kasa: ${kasano}`, this.client.user.avatarURL)
 		guild.channels.get(modlog).send({embed});
 		return msg.channel.send(` İşlem başarılı!`);
 	}

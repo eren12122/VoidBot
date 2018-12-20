@@ -7,7 +7,7 @@ module.exports = class mesajCommand extends Command {
             name: 'çağır',
             group: 'bot',
             memberName: 'çağır',
-            description: `Bot sahibini (Eren'i) çağırır.`,
+            description: `Bot sahibini çağırır.`,
         });
     }
 

@@ -64,7 +64,7 @@ module.exports = class ModerationWarnCommand extends Command {
 		.addField(`❯ Kullanıcı:`, `${user.tag} (${user.id})`, false)
 		.addField(`❯ Yetkili:`, `${msg.author.tag} (${msg.author.id})`, false)
 		.addField(`❯ Sebep`, reason, false)
-		.setFooter(`VoidBot | Kasa: ${kasano}`, this.client.user.avatarURL)
+		.setFooter(`ProxE | Kasa: ${kasano}`, this.client.user.avatarURL)
 		.setThumbnail(user.avatarURL)
 		.setTimestamp()
 		guild.channels.get(modlog).send({embed});

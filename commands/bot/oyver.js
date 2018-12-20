@@ -18,7 +18,7 @@ module.exports = class CheckGuildsCommand extends Command {
     const embed = new RichEmbed()
     .setColor("RANDOM")
     .setThumbnail(this.client.user.avatarURL)
-    .setAuthor(`VoidBot | Oy Ver`, this.client.user.avatarURL)    
+    .setAuthor(`ProxE | Oy Ver`, this.client.user.avatarURL)    
     .setDescription(`https://discordbots.org/bot/519216364469223434`)
 
 

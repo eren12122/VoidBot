@@ -33,7 +33,7 @@ async run(message, args) {
   	const embed = new Discord.RichEmbed()
   	.setColor("RANDOM")
     .setImage(user.avatarURL) 
-    .setFooter('VoidBot | Avatar Sistemi')
+    .setFooter('ProxE | Avatar Sistemi')
     message.channel.send({embed})
     }
 }
