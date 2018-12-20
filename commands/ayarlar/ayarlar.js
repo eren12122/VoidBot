@@ -29,11 +29,11 @@ module.exports = class channelinfoCommand extends Command {
 		.setColor("RANDOM")
 		.setAuthor(`${message.guild.name} Adlı Sunucunun Ayarları`)
 		.setThumbnail(message.guild.iconURL)
-		.addField('❯ Mod-Log Kanalı', modlog ? modlog  : `Bu Kanal Ayarlanmamış :x:`, true)
-		.addField('❯ Log Kanalı', logsChannel ? logsChannel : `Bu Kanal Ayarlanmamış :x:`, true)
-		.addField(`❯ Giriş Çıkış Kanalı📤`, girisCikis ? girisCikis : `Bu Kanal Ayarlanmamış :x:`, true)
-		.addField(`❯ Otomatik Rol/Giriş Rolü`, girisRol ? girisRol : `Oto-Rol Ayarlanmamış :x:`, true)
-		.addField(`❯ Link Engelleme Sistemi`, this.client.provider.get(message.guild.id, 'linkEngel', []) ? `✅` : `:x:`, true)
+		.addField('❯ Mod-Log Kanalı', modlog ? modlog  : `**pe!mod-log-ayarla #kanal** :x:`, true)
+		.addField('❯ Log Kanalı', logsChannel ? logsChannel : `**pe!log-ayarla #kanal** :x:`, true)
+		.addField(`❯ Giriş Çıkış Kanalı📤`, girisCikis ? girisCikis : `**pe!giriş-çıkış-ayarla #kanal** :x:`, true)
+		.addField(`❯ Oto-Rol/Giriş Rolü`, girisRol ? girisRol : `**pe!oto-rol-ayarla @Rol** :x:`, true)
+		.addField(`❯ Link Engelleme Sistemi`, this.client.provider.get(message.guild.id, 'linkEngel', []) ? `Linkleri Engelliyorum ✅` : `**pe!link-engelle** :x:`, true)
 		return message.embed(embed)
 
 	}

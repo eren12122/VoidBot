@@ -5,10 +5,10 @@ const { stripIndents } = require('common-tags');
 module.exports = class NewsCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'yardım',
+			name: 'eglencekomutları',
 			group: 'bot',
-			memberName: 'yardım',
-			description: 'Bot ile ilgili yeni özellikleri gösterir.',
+			memberName: 'eglencekomutları',
+			description: 'komutları gösterir.',
 			guildOnly: false,
 			throttling: {
 				usages: 1,
@@ -23,17 +23,19 @@ module.exports = class NewsCommand extends Command {
 			.setAuthor('ProxE', this.client.user.avatarURL)
 			.setDescription(`Komutların Başına Ayarladığın Prefixi Yazınız Eğer Ayarlamadıysanız **pe!** veya **<@519216364469223434>** Koyunuz!`)
 			.addField(`Komutlar`, stripIndents`
-			
+            **Eğlence Komutları**\n
+            8ball: Sorduğunuz veya Düşündüğünüz Sorulara Rastgele Cevaplar Verir\n
+            ascii: Yazınız Değişik Şekiller İle Yazılır \n
+            balık-tut: Balık tutarsınız.\n
+            düello: Biri ile düello atarsınız.\n
+            espri: Espri yapar.\n
+            sayıtutmaca: Tuttuğunuz Sayıyı Bilmeye Çalışır.\n
+            slot: Slot makinesiyle oynarsınız.\n
+            sor: Bota soru sormanızı sağlar.\n
+            yaz: Bota yazı yazdırırsınız.\n
 
 
-            botkomutları ---) Bot Komutlarını Gösterir \n
-            kkomutları ---) Kullanıcı Komutlarını Gösterir\n
-            eglencekomutları ---) Eğlence Komutlarını Gösterir\n
-            sunucukomutları ---) Sunucu ile İlgili Komutları Gösterir\n
-            ayarkomutları ---) Ayar Komutlarını Gösterir\n
-			      yetkilikomutları ---) Yetkili Komutlarını Gösterir\n
-            muzikkomutları ---) Müzik Komutlarını Gösterir!
-                                                                               `)
+`)
 
 			.setColor("RANDOM")
 			.setFooter('©' + (new Date()).getFullYear() + 'ProxE', this.client.user.avatarURL)

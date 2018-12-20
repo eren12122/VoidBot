@@ -25,7 +25,7 @@ module.exports = class ScanPlayingCommand extends Command {
             embed.setDescription(members.map(member => `${member}`).join("\n") || "Kimsenin oynuyor mesajı reklam içermiyor gibi görünüyor.")
             embed.setColor("RANDOM")
             embed.setTimestamp()
-            embed.setFooter(`${this.client.user.username} VoidBot Reklam Tarama Sistemi`)
+            embed.setFooter(`${this.client.user.username}  Reklam Tarama Sistemi`)
         msg.channel.send({embed})
 
     }

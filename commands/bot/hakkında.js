@@ -26,9 +26,9 @@ module.exports = class EmbedCommand extends Command {
 
 		const embed = new Discord.RichEmbed()
 		.setColor("RANDOM")
-		.addField(`❯ Botun İsmi/Adı:`, `VoidBot`)
+		.addField(`❯ Botun İsmi/Adı:`, `ProxE`)
 		.addField(`❯ Botun Sahibi/Yapımcısı:`, `<@519210018583609365>`)
-		.addField(`❯ Botun Prefixi/Ön-Eki:`, `vb! Yada <@519216364469223434>`)
+		.addField(`❯ Botun Prefixi/Ön-Eki:`, `pe! Yada <@519216364469223434>`)
 		.addField(`❯ Açık Kalma Süresi/Çalışma Süresi:`, moment.duration(this.client.uptime).format('D [gün], H [saat], m [dakika], s [saniye]'))
 		.addField(`❯ Bellek kullanımı:`, `${Math.round(process.memoryUsage().heapUsed / 1024 / 1024)}MB`)
 		.addField(`❯ Genel istatistikler:`, stripIndents`
@@ -46,7 +46,7 @@ module.exports = class EmbedCommand extends Command {
  
 		
 		`)
-        .setFooter('©' + (new Date()).getFullYear() + 'VoidBot')
+        .setFooter('©' + (new Date()).getFullYear() + 'ProxE')
 		.setThumbnail(this.client.user.avatarURL)
 		message.channel.send({embed});
         }

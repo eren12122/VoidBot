@@ -18,11 +18,11 @@ module.exports = class CheckGuildsCommand extends Command {
     const embed = new RichEmbed()
     .setColor("RANDOM")
     .setThumbnail(this.client.user.avatarURL)
-    .setAuthor(`VoidBot | Sunucular`, this.client.user.avatarURL)    
-    .setDescription(`\n    **VoidBot Kaç Sunucuda Komudu**
+    .setAuthor(`ProxE | Sunucular`, this.client.user.avatarURL)    
+    .setDescription(`\n    **ProxE Kaç Sunucuda Komudu**
 
     Şu Anda Bulunduğunuz ${message.guild.name} Adlı Sunucuda Dahil;
-    Bot ${this.client.guilds.size} adet  sunucuda bulunuyor. \nEğer O Sunucuları Merak Ediyorsan vb!sunucular ile bakabilirsin! \n Hadi Bro Sende Eklede Şura Artsın  :sweat_smile:
+    Bot ${this.client.guilds.size} adet  sunucuda bulunuyor. \nEğer O Sunucuları Merak Ediyorsan pop!sunucular ile bakabilirsin! \n Hadi Bro Sende Eklede Şura Artsın  :sweat_smile:
         `)
 
 

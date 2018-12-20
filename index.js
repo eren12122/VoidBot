@@ -175,7 +175,7 @@ if (veri === true) {
       if (!msg.member.hasPermission("ADMINISTRATOR")) {
         msg.delete();
 
-        return msg.reply('Bu sunucuda linkler **VoidBot** tarafından engellenmektedir.').then(msg => msg.delete(3000));
+        return msg.reply('Bu sunucuda linkler **ProxE** tarafından engellenmektedir.').then(msg => msg.delete(3000));
       } else {
         return;
       };
@@ -321,7 +321,7 @@ if (veri === true) {
           let embed = new Discord.RichEmbed()
           .setColor("#36393E")
           .setTitle(`Kanal Silindi.`)
-          .setDescription(`<@${msg.author.id}> tarafından <#${channel.id}> kanalı silindi. _(metin kanalı)_`)
+          .setDescription(` tarafından <#${channel.id}> kanalı silindi. _(metin kanalı)_`)
           .setFooter(`Silinen Kanal ID: ${channel.id} | Silen Kullanıcı ID: ${msg.author.id}`)
           channel.guild.channels.get(logCh).send({embed});
         };
@@ -379,22 +379,17 @@ if (veri === true) {
 	  client.setProvider(new SQLiteProvider(db));
   });
 
-  client.on('ready', () => {
-    console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LOG: Aktif, Komutlar yüklendi!`),
-    console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LOG: Bot ${client.user.username} ismi ile giriş yaptı!`);
-    console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LOG: Bot ${client.guilds.size} Sunucu | ${client.users.size} Kullanıcıya hizmet veriyor.`)
-    client.user.setStatus('streaming')
-    client.setInterval(() => {
-        client.user.setActivity("", { type: "WATCHING" });
-        client.user.setActivity("", { type: "WATCHING" });
-        client.user.setActivity(`${client.guilds.size} Sunucu | ${client.users.size} Kullanıcı`, { type: "WATCHING" });
-       client.user.setActivity(`7/24 Size Hizmet Vermektedir`, { type: "WATCHING" });
-    }, 15000);
-  });
-
-
-client.on('error', err => {
-	console.log(err)
+ 
+client.on('ready', () => {
+  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LOG: Aktif, Komutlar yüklendi!`),
+  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LOG: Bot ${client.user.username} ismi ile giriş yaptı!`);
+  console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] LOG: Bot ${client.guilds.size} Sunucu | ${client.users.size} Kullanıcıya hizmet veriyor.`)
+  client.user.setStatus('dnd')
+  client.setInterval(() => {
+      client.user.setActivity("7/24 Aktif Bot!", { type: "WATCHING" });
+      client.user.setActivity("Botu Sunucuzunuza Eklemeyi Unutmayın!", { type: "WATCHING" });
+      client.user.setActivity(`${client.guilds.size} Sunucu | ${client.users.size} Kullanıcı`, { type: "WATCHING" });
+  }, 15000);
 });
 
 
@@ -417,21 +412,21 @@ async function randomString(length, chars) {
 client.on('guildDelete', guild => {
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setTitle('Bir Sunucudan Ayrıldım;')
+  .setTitle('Bir Sunucudan Ayrıldım :frowning: ')
   .setDescription(`Bot, 》${guild.name}《 sunucudan ayrıldı [${guild.memberCount} Üye]!`)
-  .setFooter('VoidBot', client.user.avatarURL)
+  .setFooter('ProxE', client.user.avatarURL)
   .setTimestamp()
-  client.channels.get('520592540219605022').send(embed);
+  client.channels.get('522462732134514747').send(embed);
 });
 
 client.on('guildCreate', guild => {
   const embed = new Discord.RichEmbed()
   .setColor('RANDOM')
-  .setTitle('Bir Sunucuya Katıldım;')
+  .setTitle('Yeni Bir Sunucuya Katıldım :tada: ')
   .setDescription(`Bot, 》${guild.name}《 sunucuya katıldı [${guild.memberCount} Üye]!`)
-  .setFooter('VoidBot', client.user.avatarURL)
+  .setFooter('ProxE', client.user.avatarURL)
   .setTimestamp()
-  client.channels.get('520592540219605022').send(embed);
+  client.channels.get('522462732134514747').send(embed);
 });
 
 client.on('guildCreate', guild => {
@@ -441,11 +436,13 @@ client.on('guildCreate', guild => {
   let merhaba = new Discord.RichEmbed()
   .setColor(Math.floor(Math.random() * (0xFFFFFF + 1)))
   .setAuthor(guild.name, guild.iconURL)
-  .addField('**VoidBot Artık Sizin Sunucunuzda**', `${owner}`)
-  .addField('**İlk Öncelikle Beni Eklediğiniz İçin Teşekkürler!', `**Eğer Komutlar Çalışmaz İse** <@519216364469223434> prefix vb! yazmanız yeterlidir!`)
-  .addField('**Botumuzun özelliklerini öğrenmek için**', `**vb!yardim** yazmanız yeterlidir!`)
+  .addField('**ProxE Artık Sizin Sunucunuzda**', `${owner}`)
+  .addField('**İlk Öncelikle Beni Eklediğiniz İçin Teşekkürler!', `**Eğer Komutlar Çalışmaz İse** <@519216364469223434> prefix pe! yazmanız yeterlidir!`)
+  .addField('**Botumuzun özelliklerini öğrenmek için**', `**pe!yardım** yazmanız yeterlidir!`)
   mrb.send(merhaba);
 });
 
 
 
+
+  

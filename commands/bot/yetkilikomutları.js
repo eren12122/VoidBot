@@ -5,10 +5,10 @@ const { stripIndents } = require('common-tags');
 module.exports = class NewsCommand extends Command {
 	constructor(client) {
 		super(client, {
-			name: 'yardım',
+			name: 'yetkilikomutları',
 			group: 'bot',
-			memberName: 'yardım',
-			description: 'Bot ile ilgili yeni özellikleri gösterir.',
+			memberName: 'yetkilikomutları',
+			description: 'komutlar.',
 			guildOnly: false,
 			throttling: {
 				usages: 1,
@@ -26,14 +26,16 @@ module.exports = class NewsCommand extends Command {
 			
 
 
-            botkomutları ---) Bot Komutlarını Gösterir \n
-            kkomutları ---) Kullanıcı Komutlarını Gösterir\n
-            eglencekomutları ---) Eğlence Komutlarını Gösterir\n
-            sunucukomutları ---) Sunucu ile İlgili Komutları Gösterir\n
-            ayarkomutları ---) Ayar Komutlarını Gösterir\n
-			      yetkilikomutları ---) Yetkili Komutlarını Gösterir\n
-            muzikkomutları ---) Müzik Komutlarını Gösterir!
-                                                                               `)
+            **Moderasyon Komutları**\n
+            ban: İstediğiniz kişiyi sunucudan yasaklar.\n
+            kick: İstediğiniz kişiyi sunucudan atar.\n
+            konuştur: İstediğiniz kişinin susturmasını açar\n
+            reklam-taraması: Oynuyor mesajlarındaki reklamları arar.\n
+            sustur: İstediğiniz kişiyi susturur.\n
+            temizle: İstediğiniz sayıda mesaj siler.\n
+            uyar: İstediğiniz kişiye uyarı verir.\n
+            
+`)
 
 			.setColor("RANDOM")
 			.setFooter('©' + (new Date()).getFullYear() + 'ProxE', this.client.user.avatarURL)
